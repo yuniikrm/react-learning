@@ -59,6 +59,12 @@ function App() {
 HOC adalah fungsi yang mengambil komponen dan mengembalikan komponen baru dengan fungsionalitas tambahan. Hal ini memungkinkan Anda menyusun komponen dengan menyempurnakannya menggunakan logika yang dapat digunakan kembali.
 
 ```jsx
+function MyComponent(props) {
+  return (
+    <div>MyComponent {props.value}</div>
+  )
+}
+
 function withLogger(WrappedComponent) {
   return function WithLogger(props) {
     console.log("Props:", props);
@@ -73,25 +79,26 @@ const EnhancedComponent = withLogger(MyComponent);
 
 Render Props merupakan teknik berbagi kode antar komponen React menggunakan prop yang nilainya berupa fungsi yang mengembalikan elemen.
 
-```jsx
-function App() {
-const data = 'App'
+<pre class="language-jsx"><code class="lang-jsx">function App() {
+   const data = 'Hello App'
     return (
-      <div>
-        <h1>Hello!</h1>
-        <Mouse render={() => (
-          <div>hello from render {app}</div>
-        )}/>
-      </div>
+      &#x3C;div>
+        &#x3C;h1>Hello!&#x3C;/h1>
+        &#x3C;CustomComponent 
+          render={() => (
+            &#x3C;div>hello from render {app}&#x3C;/div>
+          )} 
+        />
+      &#x3C;/div>
     );
 }
 
-function CustomComponent(props) {
-  return (
-    <div>
-      <div>Inside custom component</div>
-      {props.render}
-    </div>
+<strong>function CustomComponent(props) {
+</strong>  return (
+    &#x3C;div>
+      &#x3C;div>Inside custom component&#x3C;/div>
+      {props.render()}
+    &#x3C;/div>
   )
 }
-```
+</code></pre>
