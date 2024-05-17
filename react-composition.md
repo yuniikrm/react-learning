@@ -79,26 +79,27 @@ const EnhancedComponent = withLogger(MyComponent);
 
 Render Props merupakan teknik berbagi kode antar komponen React menggunakan prop yang nilainya berupa fungsi yang mengembalikan elemen.
 
-<pre class="language-jsx"><code class="lang-jsx">function App() {
+```jsx
+function App() {
    const data = 'Hello App'
     return (
-      &#x3C;div>
-        &#x3C;h1>Hello!&#x3C;/h1>
-        &#x3C;CustomComponent 
+      <div>
+        <h1>Hello!</h1>
+        <CustomComponent 
           render={() => (
-            &#x3C;div>hello from render {app}&#x3C;/div>
+            <div>hello from render {app}</div>
           )} 
         />
-      &#x3C;/div>
+      </div>
     );
 }
 
-<strong>function CustomComponent(props) {
-</strong>  return (
-    &#x3C;div>
-      &#x3C;div>Inside custom component&#x3C;/div>
+function CustomComponent(props) {
+ return (
+    <div>
+      <div>Inside custom component</div>
       {props.render()}
-    &#x3C;/div>
+    </div>
   )
 }
-</code></pre>
+```
