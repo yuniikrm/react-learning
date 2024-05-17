@@ -12,7 +12,7 @@ Tahap ini terjadi saat sebuah komponen sedang dibuat dan dimasukkan ke dalam DOM
 
 <pre class="language-javascript"><code class="lang-javascript">import React from 'react';
 
-class LifecycleExample extends React.Component {
+class App extends React.Component {
   // Dieksekusi pertama kali
 <strong>  constructor(props) {
 </strong><strong>    super(props);
@@ -36,7 +36,7 @@ class LifecycleExample extends React.Component {
   }
 }
 
-export default LifecycleExample;
+export default App;
 </code></pre>
 
 * `constructor`,  dipanggil saat pembuatan instance komponen. Di sini, kita bisa melakukan inisialisasi state dan binding metode.&#x20;
@@ -49,7 +49,7 @@ Tahap ini terjadi saat sebuah komponen sedang diperbarui dengan prop baru atau s
 
 <pre class="language-javascript"><code class="lang-javascript">import React from 'react';
 
-class LifecycleExample extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { count: 0 };
@@ -83,7 +83,7 @@ class LifecycleExample extends React.Component {
   }
 }
 
-export default LifecycleExample;
+export default App;
 </code></pre>
 
 * `componentDidUpdate`, dipanggil setelah pembaruan komponen dan re-render. Ini memungkinkan  untuk melakukan aksi setelah perubahan terjadi.
@@ -94,7 +94,7 @@ Tahap ini terjadi saat sebuah komponen sedang dihapus dari DOM. Ini bisa terjadi
 
 <pre class="language-javascript"><code class="lang-javascript">import React from 'react';
 
-class LifecycleExample extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { count: 0 };
@@ -131,7 +131,7 @@ class LifecycleExample extends React.Component {
   }
 }
 
-export default LifecycleExample;
+export default App;
 </code></pre>
 
 * `componentWillUnmount`, dipanggil sebelum komponen dihapus dari DOM. Ini digunakan untuk membersihkan sumber daya yang tidak terpakai.
@@ -148,7 +148,7 @@ Pada fase ini kita bisa memulai mounting tanpa adanya effect dari value lain. di
 
 <pre class="language-typescript"><code class="lang-typescript">import React, { useState, useEffect } from 'react';
 
-const LifecycleExample: React.FC = () => {
+const App: React.FC = () => {
   const [count, setCount] = useState&#x3C;number>(0);
 
 <strong>  useEffect(() => {
@@ -162,7 +162,7 @@ const LifecycleExample: React.FC = () => {
   );
 };
 
-export default LifecycleExample;
+export default App;
 </code></pre>
 
 ### Update Effect
@@ -171,7 +171,7 @@ Fase dimana kita bisa melakukan update data pada effect yang bergantung pada val
 
 <pre class="language-typescript"><code class="lang-typescript">import React, { useState, useEffect } from 'react';
 
-const LifecycleExample: React.FC = () => {
+const App: React.FC = () => {
   const [count, setCount] = useState&#x3C;number>(0);
   const [message, setMessage] = useState&#x3C;string>('');
 
@@ -202,7 +202,7 @@ const LifecycleExample: React.FC = () => {
   );
 };
 
-export default LifecycleExample;
+export default App;
 </code></pre>
 
 ### Clean Effect
@@ -211,7 +211,7 @@ Fase dimana kita dapat membershikan perintah-perintah yang sudah tidak diperluka
 
 <pre class="language-typescript"><code class="lang-typescript">import React, { useState, useEffect } from 'react';
 
-const TimerComponent = () => {
+const App = () => {
   const [timer, setTimer] = useState(0);
 
 <strong>  useEffect(() => {
@@ -232,6 +232,6 @@ const TimerComponent = () => {
   );
 };
 
-export default TimerComponent;
+export default App;
 </code></pre>
 
