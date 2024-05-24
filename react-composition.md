@@ -47,8 +47,8 @@ function ParentComponent({ children }) {
 function App() {
   return (
     <ParentComponent>
-      <ChildComponent1 />
-      <ChildComponent2 />
+      <ChildComponent value="Component 1" />
+      <ChildComponent value="Component 2" />
     </ParentComponent>
   );
 }

@@ -9,3 +9,4 @@
 * [React API Call](react-api-call/README.md)
   * [Axios](react-api-call/axios.md)
   * [React Query](react-api-call/react-query.md)
+* [React with Typescript](react-with-typescript.md)
