@@ -9,4 +9,7 @@
 * [React with Typescript](react-with-typescript.md)
 * [React API Call](react-api-call/README.md)
   * [Axios](react-api-call/axios.md)
-  * [React Query](react-api-call/react-query.md)
+  * [React Query](react-api-call/react-query/README.md)
+    * [useQuery](react-api-call/react-query/usequery.md)
+    * [useMutation](react-api-call/react-query/usemutation.md)
+  * [React API Call with UI Kit](react-api-call/react-api-call-with-ui-kit.md)
