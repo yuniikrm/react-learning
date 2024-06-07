@@ -16,13 +16,13 @@ React Query adalah sebuah library yang digunakan untuk memudahkan proses pemangg
 * Mutation Management: Mempermudah proses Create, Update, Delete di dalam server (POST, PUT, DELETE).
 * Query Invalidation: Pemanggilan API dapat di-invalidate / di-refetch ketika ada data yang berubah. Hal ini memastikan konsistensi dalam pemanggilan API tersebut
 
-## Usage
+## Initialize
 
 Inisialisasi Query Client biasanya dilakukan di level tertinggi aplikasi Anda, seperti di file index atau app
 
-<pre class="language-tsx"><code class="lang-tsx">// File App.tsx
-<strong>
-</strong>import { QueryClient, QueryClientProvider } from 'react-query';
+```tsx
+// File App.tsx
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 // membuat instance dari QueryClient dengan default value 
 const queryClient = new QueryClient({
@@ -36,15 +36,15 @@ const queryClient = new QueryClient({
 
 function App() {
   return (
-    &#x3C;QueryClientProvider client={queryClient}>
-      &#x3C;Router />
-    &#x3C;/QueryClientProvider>
+    <QueryClientProvider client={queryClient}>
+      <Router />
+    </QueryClientProvider>
   )
 }
 
 export default App
 
-</code></pre>
+```
 
 ```
 ```
