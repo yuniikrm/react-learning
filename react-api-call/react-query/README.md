@@ -3,7 +3,7 @@
 ## Installation
 
 ```sh
-pnpm add @tanstack/react-query
+pnpm add react-query
 ```
 
 ## Definition
