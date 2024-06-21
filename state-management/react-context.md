@@ -1,6 +1,6 @@
 # React Context
 
-React Context dalah salah satu cara untuk melakukan State Management secara global di dalam sebuah aplikasi.
+React Context adalah salah satu cara untuk melakukan State Management secara global di dalam sebuah aplikasi.
 
 React Context terdiri dari 3 langkah utama:
 
