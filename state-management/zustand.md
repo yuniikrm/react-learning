@@ -6,6 +6,12 @@ Sama seperti **Context**, penggunaan **Zustand** dilakukan saat kita melakukan s
 
 Penggunaan **Zustand** lebih sederhana dibandingkan dengan penggunaan **Context** karena tidak memerlukan pembungkusan dengan `ContextProvider`.
 
+## Installation
+
+```
+pnpm add zustand
+```
+
 ## Store
 
 Store di dalam **Zustand** digunakan untuk menyimpan state / function yang dapat digunakan untuk memodifikasi state yang ada.

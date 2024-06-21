@@ -17,3 +17,4 @@
   * [useState](state-management/usestate.md)
   * [React Context](state-management/react-context.md)
   * [Zustand](state-management/zustand.md)
+* [Styling with Tailwind](styling-with-tailwind.md)
