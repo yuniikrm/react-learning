@@ -19,3 +19,4 @@
   * [Zustand](state-management/zustand.md)
 * [Styling with Tailwind](styling-with-tailwind/README.md)
   * [Responsive Design](styling-with-tailwind/responsive-design.md)
+  * [Customizing Theme](styling-with-tailwind/customizing-theme.md)
