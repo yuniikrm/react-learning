@@ -5,7 +5,7 @@ Tailwind adalah library utility classes untuk styling, yang memungkinkan untuk m
 ## Installation
 
 ```
-pnpm add tailwindcss
+pnpm install -D tailwindcss postcss autoprefixer
 ```
 
 ## Configuration
@@ -13,10 +13,24 @@ pnpm add tailwindcss
 Setelah menginstal, Anda perlu mengonfigurasi Tailwind. Jika Anda belum memiliki file konfigurasi, Anda bisa menghasilkannya dengan menjalankan:
 
 ```
-npx tailwindcss init
+npx tailwindcss init -p
 ```
 
 Ini akan membuat file `tailwind.config.js` di direktori proyek Anda.
+
+```javascript
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
 
 ## Import
 
@@ -27,6 +41,24 @@ Buka file CSS utama proyek Anda (biasanya `src/index.css` atau `src/App.css`) da
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+```
+
+## Modify vite.config.js
+
+```javascript
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from "tailwindcss";
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  css: {
+    postcss: {
+      plugins: [tailwindcss()],
+    },
+  },
+})
 ```
 
 ## Usage
